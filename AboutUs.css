@@ -1,0 +1,359 @@
+/* ==============================
+   POWERPUFF GIRLS ABOUT PAGE
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background-color: #f8d9ec;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px);
+    background-size: 25px 25px;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Main Page */
+
+.page {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background: white;
+    border: 6px solid #222;
+    box-shadow: 12px 12px 0 #222;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+    text-align: center;
+    border-bottom: 5px solid #222;
+    padding: 10px 10px 25px;
+}
+
+.small-title {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #e91e63;
+}
+
+header h1 {
+    font-family: Impact, sans-serif;
+    font-size: 65px;
+    letter-spacing: 5px;
+    margin: 5px 0;
+    transform: rotate(-2deg);
+}
+
+header h1 span {
+    color: #e91e63;
+    text-shadow: 4px 4px 0 #ffd92f;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.school {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* ==============================
+   COLLAGE
+   ============================== */
+
+.collage {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    position: relative;
+}
+
+/* Member Cards */
+
+.member {
+    padding: 18px;
+    border: 5px solid #222;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 250px;
+    box-shadow: 8px 8px 0 #222;
+    transition: 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+/* Card Colors */
+
+.card-pink {
+    background: #ff7eb9;
+    transform: rotate(-2deg);
+}
+
+.card-blue {
+    background: #75d8ff;
+    transform: rotate(2deg);
+}
+
+.card-green {
+    background: #82e68c;
+    transform: rotate(2deg);
+}
+
+.card-purple {
+    background: #c99cff;
+    transform: rotate(-2deg);
+}
+
+/* ==============================
+   PHOTO
+   ============================== */
+
+.photo {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    background: #eee;
+    border: 5px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: rotate(-3deg);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+   If there is no picture yet,
+   the empty box will remain as a
+   placeholder for your 2x2 picture.
+*/
+
+/* ==============================
+   MEMBER INFORMATION
+   ============================== */
+
+.info h2 {
+    font-family: Impact, sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.nickname {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d81b60;
+    margin: 5px 0 15px;
+}
+
+.info p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* ==============================
+   CENTER POWERPUFF DECORATION
+   ============================== */
+
+.center-piece {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+    pointer-events: none;
+}
+
+.cloud {
+    background: #fff;
+    border: 5px solid #222;
+    padding: 12px 25px;
+    font-family: Impact, sans-serif;
+    font-size: 28px;
+    transform: rotate(-8deg);
+    box-shadow: 5px 5px 0 #222;
+}
+
+.heart {
+    font-size: 55px;
+    color: #e91e63;
+    -webkit-text-stroke: 3px #222;
+    margin-top: 5px;
+}
+
+.center-piece p {
+    font-family: Impact, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* ==============================
+   ABOUT TEAM BOX
+   ============================== */
+
+.about-box {
+    margin-top: 50px;
+    padding: 25px;
+    border: 5px solid #222;
+    background: #fff36b;
+    box-shadow: 8px 8px 0 #222;
+    transform: rotate(1deg);
+    text-align: center;
+}
+
+.about-box h2 {
+    font-family: Impact, sans-serif;
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.about-box p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+/* Tags */
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.tags span {
+    background: white;
+    border: 3px solid #222;
+    padding: 8px 15px;
+    font-weight: bold;
+    box-shadow: 4px 4px 0 #222;
+}
+
+/* ==============================
+   MOJO JOJO
+   ============================== */
+
+.mojo {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    background: #6d38a8;
+    color: white;
+    border: 4px solid #222;
+    padding: 10px 15px;
+    font-family: Impact, sans-serif;
+    transform: rotate(7deg);
+    z-index: 20;
+    box-shadow: 5px 5px 0 #222;
+}
+
+.mojo-circle {
+    width: 90px;
+    height: 90px;
+    background: #7b42b9;
+    border: 4px solid #222;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Impact, sans-serif;
+    font-size: 17px;
+    transform: rotate(-8deg);
+    box-shadow: 5px 5px 0 #222;
+}
+
+footer {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    border-top: 5px dashed #222;
+    font-weight: bold;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .collage {
+        grid-template-columns: 1fr;
+    }
+
+    .center-piece {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 48px;
+    }
+
+    .member {
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .page {
+        width: 92%;
+        padding: 15px;
+        box-shadow: 7px 7px 0 #222;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    .member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .mojo {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
