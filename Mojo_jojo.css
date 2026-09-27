@@ -1,12 +1,24 @@
-* {
+S* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
+/* Body */
+
 body {
-    background-color: #92149a;
+
+    background-image: url("background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
 
     font-family: Arial, sans-serif;
 
@@ -20,17 +32,18 @@ body {
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* Navigation */
 
 nav {
+
     position: fixed;
 
     top: 16px;
+
     left: 1%;
 
     width: 98%;
+
     height: 44px;
 
     background-color: #b879bd;
@@ -38,10 +51,78 @@ nav {
     border-radius: 30px;
 
     z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s ease;
 }
 
 
-nav ul {
+/* Navigation hover */
+
+nav:hover {
+
+    transform: translateY(2px);
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Logo */
+
+.logo {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    width: 100px;
+
+    height: 100px;
+
+    transform: translateY(-50%);
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    z-index: 15;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* Logo hover */
+
+.logo:hover {
+
+    transform:
+        translateY(-50%)
+        rotate(-5deg)
+        scale(1.05);
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255,255,255,0.5)
+        );
+}
+
+
+/* Navigation Menu */
+
+nav > ul {
+
     list-style: none;
 
     height: 100%;
@@ -55,15 +136,19 @@ nav ul {
     padding-right: 25px;
 
     gap: 35px;
+
+    width: 100%;
 }
 
 
 nav ul li {
+
     position: relative;
 }
 
 
 nav ul li a {
+
     text-decoration: none;
 
     color: black;
@@ -74,49 +159,57 @@ nav ul li a {
 
     display: block;
 
-    transition: 0.2s;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 
-nav ul li a:hover {
+/* Navigation hover */
+
+nav ul > li > a:hover {
+
     color: white;
+
+    transform: translateY(-2px);
 }
 
 
-/* =========================
-   NAVIGATION ORDER
-========================= */
+/* Navigation Order */
 
-nav ul > li:nth-child(1) {
+nav > ul > li:nth-child(1) {
+
     order: 1;
 }
 
 
-nav ul > li:nth-child(2) {
+nav > ul > li:nth-child(2) {
+
     order: 2;
 }
 
 
-nav ul > li:nth-child(4) {
+nav > ul > li:nth-child(4) {
+
     order: 3;
 }
 
 
-nav ul > li:nth-child(3) {
+nav > ul > li:nth-child(3) {
+
     order: 4;
 }
 
-
-/* =========================
-   HERO DROPDOWN
-========================= */
+/* Hero Dropdown */
 
 .has-dropdown {
+
     position: relative;
 }
 
 
 #heroButton {
+
     cursor: pointer;
 
     padding: 10px 5px;
@@ -124,19 +217,24 @@ nav ul > li:nth-child(3) {
 
 
 #heroButton:hover {
+
     color: white;
 }
 
 
-/* DROPDOWN */
+/* Dropdown */
 
 .has-dropdown .dropdown {
+
     position: absolute;
 
     top: 42px;
+
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%)
+        translateY(-8px);
 
     width: 160px;
 
@@ -155,31 +253,68 @@ nav ul > li:nth-child(3) {
     gap: 5px;
 
     box-shadow:
-        4px 4px 0px rgba(0, 0, 0, 0.25);
+        4px 4px 0
+        rgba(0, 0, 0, 0.25);
 
     z-index: 20;
+
+    opacity: 0;
 }
 
 
-/* SHOW DROPDOWN */
+/* Show Dropdown */
 
 .has-dropdown .dropdown.show {
+
     display: flex;
+
+    animation:
+        dropdownIn
+        0.25s
+        ease
+        forwards;
 }
 
 
-/* DROPDOWN ITEMS */
+/* Dropdown animation */
+
+@keyframes dropdownIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            translateY(-8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+}
+
+
+/* Dropdown List Items */
 
 .has-dropdown .dropdown li {
+
     width: 100%;
 
     text-align: center;
 }
 
 
-/* DROPDOWN LINKS */
+/* Dropdown Items */
 
 .has-dropdown .dropdown li a {
+
     color: black;
 
     font-size: 17px;
@@ -188,23 +323,28 @@ nav ul > li:nth-child(3) {
 
     text-transform: uppercase;
 
-    transition: 0.2s;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
 }
 
 
 .has-dropdown .dropdown li a:hover {
+
     color: white;
 
     background-color:
         rgba(92, 13, 97, 0.3);
+
+    padding-left: 16px;
 }
 
 
-/* =========================
-   MAIN TITLE
-========================= */
+/* Main Title */
 
 h1 {
+
     color: white;
 
     font-family: Impact, sans-serif;
@@ -222,14 +362,42 @@ h1 {
     position: relative;
 
     z-index: 0;
+
+    animation:
+        titleFloat
+        4s
+        ease-in-out
+        infinite;
+
+    text-shadow:
+        5px 5px 0 #5c0d61;
 }
 
 
-/* =========================
-   MOJO JOJO IMAGE
-========================= */
+/* Title floating animation */
+
+@keyframes titleFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+    }
+
+}
+
+
+/* Mojo Jojo Image */
 
 .mojo-image {
+
     position: fixed;
 
     width: 500px;
@@ -240,17 +408,49 @@ h1 {
 
     top: 45px;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     z-index: 1;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+
+    animation:
+        mojoFloat
+        4s
+        ease-in-out
+        infinite;
 }
 
 
-/* =========================
-   MOJO JOJO EYES
-========================= */
+/* Character floating */
+
+@keyframes mojoFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            translateY(-7px);
+    }
+
+}
+
+
+/* Mojo Jojo Eyes */
 
 .mojo-eyes {
+
     position: fixed;
 
     width: 500px;
@@ -261,7 +461,8 @@ h1 {
 
     top: 45px;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     z-index: 2;
 
@@ -269,9 +470,10 @@ h1 {
 }
 
 
-/* EYES */
+/* EYE */
 
 .eye {
+
     position: absolute;
 
     background-color: white;
@@ -285,6 +487,7 @@ h1 {
 /* LEFT EYE */
 
 .left-eye {
+
     left: 203px;
 
     top: 263px;
@@ -294,10 +497,10 @@ h1 {
     height: 25px;
 }
 
-
 /* RIGHT EYE */
 
 .right-eye {
+
     left: 273px;
 
     top: 264px;
@@ -308,9 +511,10 @@ h1 {
 }
 
 
-/* PUPILS */
+/* Pupil */
 
 .pupil {
+
     position: absolute;
 
     width: 9px;
@@ -327,14 +531,16 @@ h1 {
 
     transform:
         translate(-50%, -50%);
+
+    transition:
+        transform 0.08s linear;
 }
 
 
-/* =========================
-   INFORMATION SECTION
-========================= */
+/* Information Section */
 
 .info-section {
+
     position: relative;
 
     width: 100%;
@@ -344,12 +550,10 @@ h1 {
     margin-top: 300px;
 }
 
-
-/* =========================
-   H3
-========================= */
+/* H3 */
 
 h3 {
+
     position: absolute;
 
     left: 120px;
@@ -358,7 +562,9 @@ h3 {
 
     color: white;
 
-    font-family: "Times New Roman", serif;
+    font-family:
+        "Times New Roman",
+        serif;
 
     font-size: 50px;
 
@@ -369,10 +575,15 @@ h3 {
     letter-spacing: 3px;
 
     text-shadow:
-        4px 4px 0px #5c0d61;
+        4px 4px 0 #5c0d61;
 
     background-color:
-        rgba(184, 121, 189, 0.25);
+        rgba(
+            184,
+            121,
+            189,
+            0.25
+        );
 
     border-left:
         8px solid #b879bd;
@@ -380,14 +591,34 @@ h3 {
     border-radius: 15px;
 
     padding: 15px 20px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
 }
 
 
-/* =========================
-   H4
-========================= */
+/* H3 hover */
+
+h3:hover {
+
+    transform:
+        translateX(8px);
+
+    background-color:
+        rgba(
+            184,
+            121,
+            189,
+            0.4
+        );
+}
+
+
+/* h4 */
 
 h4 {
+
     position: absolute;
 
     right: 80px;
@@ -396,17 +627,32 @@ h4 {
 
     width: 420px;
 
-    color: rgb(255, 253, 253);
+    color: rgb(
+        255,
+        253,
+        253
+    );
 
     padding: 20px;
 
     border-radius: 15px;
 
     background-color:
-        rgba(184, 121, 189, 0.25);
+        rgba(
+            184,
+            121,
+            189,
+            0.25
+        );
 
     border:
-        2px solid rgba(184, 121, 189, 0.6);
+        2px solid
+        rgba(
+            184,
+            121,
+            189,
+            0.6
+        );
 
     z-index: 3;
 
@@ -417,17 +663,44 @@ h4 {
     font-size: 18px;
 
     box-shadow:
-        6px 6px 0px rgba(0, 0, 0, 0.2);
+        6px 6px 0
+        rgba(
+            0,
+            0,
+            0,
+            0.2
+        );
 
-    backdrop-filter: blur(5px);
+    backdrop-filter:
+        blur(5px);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* H4 hover */
+
+h4:hover {
+
+    transform:
+        translateY(-5px);
+
+    background-color:
+        rgba(
+            184,
+            121,
+            189,
+            0.35
+        );
+}
+
+
+/* footer */
 
 footer {
+
     position: absolute;
 
     bottom: 0;
@@ -438,22 +711,172 @@ footer {
 
     height: 30px;
 
-    background-color: #eeeeee;
+    background-color:
+        #eeeeee;
 
     display: flex;
 
     justify-content: center;
 
     align-items: center;
+
+    transition:
+        background-color 0.3s ease;
+}
+
+
+footer:hover {
+
+    background-color:
+        white;
 }
 
 
 footer p {
+
     color: black;
 
-    font-family: Impact, sans-serif;
+    font-family:
+        Impact,
+        sans-serif;
 
     font-size: 20px;
 
     text-transform: uppercase;
+}
+
+
+/* responsive */
+
+@media (max-width: 900px) {
+
+    h1 {
+
+        font-size: 120px;
+    }
+
+
+    .mojo-image {
+
+        width: 400px;
+    }
+
+
+    .mojo-eyes {
+
+        width: 400px;
+
+        transform:
+            translateX(-50%);
+    }
+
+
+    h3 {
+
+        left: 40px;
+
+        font-size: 40px;
+    }
+
+
+    h4 {
+
+        right: 40px;
+
+        width: 350px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    nav {
+
+        height: 50px;
+    }
+
+
+    .logo {
+
+        width: 70px;
+
+        height: 70px;
+
+        left: 8px;
+    }
+
+
+    nav > ul {
+
+        gap: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    nav ul li a {
+
+        font-size: 13px;
+    }
+
+
+    h1 {
+
+        font-size: 70px;
+
+        margin-top: 220px;
+    }
+
+
+    .mojo-image {
+
+        width: 330px;
+    }
+
+
+    .mojo-eyes {
+
+        width: 330px;
+    }
+
+
+    .info-section {
+
+        margin-top: 250px;
+    }
+
+
+    h3 {
+
+        position: relative;
+
+        left: 20px;
+
+        top: 40px;
+
+        width: fit-content;
+
+        font-size: 32px;
+    }
+
+
+    h4 {
+
+        position: relative;
+
+        right: auto;
+
+        top: 70px;
+
+        left: 20px;
+
+        width:
+            calc(100% - 40px);
+    }
+
 }
