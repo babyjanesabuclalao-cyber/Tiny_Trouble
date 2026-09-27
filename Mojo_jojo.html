@@ -1,63 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Mojo Jojo</title>
 
-    <link rel="stylesheet" href="Mojo_jojo.css">
+    <link rel="stylesheet"
+          href="Mojo_jojo.css">
+
 </head>
+
 
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
     <nav>
+
+        <!-- LOGO -->
+
+        <img
+            src="logo.png"
+            alt="Logo"
+            class="logo"
+        >
+
+
+        <!-- NAVIGATION MENU -->
+
         <ul>
 
             <li>
-                <a href="Home.html">Home</a>
+                <a href="Home.html">
+                    Home
+                </a>
             </li>
 
-            <!-- HERO -->
+
+            <!-- HERO DROPDOWN -->
+
             <li class="has-dropdown">
 
-                <a href="#" id="heroButton">Hero</a>
+                <a href="#"
+                   id="heroButton">
 
-                <ul class="dropdown" id="heroDropdown">
+                    Hero
+
+                </a>
+
+
+                <ul class="dropdown"
+                    id="heroDropdown">
+
 
                     <li>
-                        <a href="Blossom.html">Blossom</a>
+
+                        <a href="Blossom.html">
+                            Blossom
+                        </a>
+
                     </li>
 
-                    <li>
-                        <a href="Bubbles.html">Bubbles</a>
-                    </li>
 
                     <li>
-                        <a href="Buttercup.html">Buttercup</a>
+
+                        <a href="Bubbles.html">
+                            Bubbles
+                        </a>
+
                     </li>
+
+
+                    <li>
+
+                        <a href="Buttercup.html">
+                            Buttercup
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="Mojo_Jojo.html">
+                            Mojo Jojo
+                        </a>
+
+                    </li>
+
 
                 </ul>
 
             </li>
 
-            <li>
-                <a href="Gallery.html">Gallery</a>
-            </li>
 
             <li>
-                <a href="about.html">About Us</a>
+
+                <a href="Gallery.html">
+                    Gallery
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
             </li>
 
         </ul>
+
     </nav>
 
 
-    <!-- MAIN TITLE -->
-    <h1>MOJO JOJO</h1>
+
+    <!-- =========================
+         MAIN TITLE
+    ========================= -->
+
+    <h1>
+        MOJO JOJO
+    </h1>
 
 
-    <!-- MOJO JOJO IMAGE -->
+
+    <!-- =========================
+         MOJO JOJO IMAGE
+    ========================= -->
+
     <img
         src="mojojojo.png"
         alt="Mojo Jojo"
@@ -65,130 +146,81 @@
     >
 
 
-    <!-- MOJO JOJO EYES -->
+
+    <!-- =========================
+         MOJO JOJO EYES
+    ========================= -->
+
     <div class="mojo-eyes">
 
+
         <div class="eye left-eye">
+
             <div class="pupil"></div>
+
         </div>
+
+
 
         <div class="eye right-eye">
+
             <div class="pupil"></div>
+
         </div>
 
+
     </div>
 
 
-    <!-- INFORMATION SECTION -->
+
+    <!-- =========================
+         INFORMATION
+    ========================= -->
+
     <div class="info-section">
 
-        <h3>MOJO JOJO</h3>
+
+        <h3>
+            MOJO JOJO
+        </h3>
+
+
 
         <h4>
-            The brilliant and mischievous villain of the Powerpuff Girls.
-            Mojo Jojo is known for his intelligence, inventions, and
-            never-ending plans to take over Townsville.
+
+            The brilliant and mischievous
+            villain of the Powerpuff Girls.
+            Mojo Jojo is known for his
+            intelligence, inventions, and
+            never-ending plans to take over
+            Townsville.
+
         </h4>
+
 
     </div>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
-        <p>© 2026 Mojo Jojo | All Rights Reserved</p>
+
+        <p>
+            © 2026 Mojo Jojo | All Rights Reserved
+        </p>
+
     </footer>
 
 
-    <!-- JAVASCRIPT -->
-    <script>
 
-        /* =========================
-           HERO DROPDOWN
-        ========================= */
+    <!-- JAVASCRIPT FILE -->
 
-        const heroButton =
-            document.getElementById("heroButton");
+    <script src="Mojo_jojo.js"></script>
 
-        const heroDropdown =
-            document.getElementById("heroDropdown");
-
-
-        heroButton.addEventListener("click", function(event) {
-
-            event.preventDefault();
-
-            heroDropdown.classList.toggle("show");
-
-        });
-
-
-        /* CLOSE DROPDOWN WHEN CLICKING OUTSIDE */
-
-        document.addEventListener("click", function(event) {
-
-            if (
-                !heroButton.contains(event.target) &&
-                !heroDropdown.contains(event.target)
-            ) {
-
-                heroDropdown.classList.remove("show");
-
-            }
-
-        });
-
-
-        /* =========================
-           MOJO JOJO EYES
-        ========================= */
-
-        const pupils =
-            document.querySelectorAll(".pupil");
-
-
-        document.addEventListener("mousemove", function(event) {
-
-            pupils.forEach(function(pupil) {
-
-                const eye =
-                    pupil.parentElement;
-
-                const eyeRect =
-                    eye.getBoundingClientRect();
-
-                const eyeCenterX =
-                    eyeRect.left +
-                    eyeRect.width / 2;
-
-                const eyeCenterY =
-                    eyeRect.top +
-                    eyeRect.height / 2;
-
-                const angle =
-                    Math.atan2(
-                        event.clientY - eyeCenterY,
-                        event.clientX - eyeCenterX
-                    );
-
-                const distance = 6;
-
-                const x =
-                    Math.cos(angle) * distance;
-
-                const y =
-                    Math.sin(angle) * distance;
-
-                pupil.style.transform =
-                    `translate(
-                        calc(-50% + ${x}px),
-                        calc(-50% + ${y}px)
-                    )`;
-
-            });
-
-        });
-
-    </script>
 
 </body>
+
 </html>
