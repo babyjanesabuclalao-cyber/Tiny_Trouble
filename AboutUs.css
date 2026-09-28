@@ -1,6 +1,5 @@
-/* =========================================
-   GENERAL
-========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
 
 * {
     margin: 0;
@@ -8,253 +7,474 @@
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: "Trebuchet MS", Arial, sans-serif;
-
-    background-color: #48cfd5;
-
-    background-image:
-        radial-gradient(
-            circle,
-            rgba(255,255,255,0.35) 2px,
-            transparent 2px
-        );
-
-    background-size: 25px 25px;
-
-    color: #222;
+    font-family: 'Fredoka', sans-serif;
 
     min-height: 100vh;
+
+    background: #13cddd;
+
+    color: #17205b;
 }
 
 
-/* =========================================
-   NAVBAR
-   INSPIRED BY YOUR PICTURE
-========================================= */
+.townsville-bg {
 
-.navbar {
+    position: fixed;
 
-    width: 92%;
+    inset: 0;
 
-    height: 85px;
+    overflow: hidden;
 
-    margin: 35px auto 0;
+    z-index: -2;
 
-    background: #ef75a5;
+    background:
+        linear-gradient(#12cddd 0%,
+            #27d9e4 65%,
+            #8eeaf0 100%);
 
-    border: 4px solid #222;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 5px 25px;
-
-    position: relative;
-
-    z-index: 10;
-
-    box-shadow: 0 5px 0 rgba(0,0,0,0.2);
 }
-
-
-/* =========================================
-   LOGO
-========================================= */
 
 .logo {
-
-    height: 75px;
-
-    display: flex;
-
-    align-items: center;
-}
-
-.logo a {
-
-    display: flex;
-
-    align-items: center;
+    position: absolute;
+    left: 30px;
+    top: -25px;
+    z-index: 10;
 }
 
 .logo img {
-
-    width: 210px;
-
-    height: auto;
-
-    max-height: 70px;
-
-    object-fit: contain;
+    width: 180px;
+    height: 140px;
+    display: block;
 }
 
 
-/* =========================================
-   NAVIGATION LINKS
-========================================= */
+.cloud {
 
-.nav-links {
+    position: absolute;
 
+    width: 180px;
+    height: 55px;
+
+    background: #fffde9;
+
+    border-radius: 100px;
+
+    opacity: .9;
+
+}
+
+
+.cloud::before,
+.cloud::after {
+
+    content: "";
+
+    position: absolute;
+
+    background: #fffde9;
+
+    border-radius: 50%;
+
+}
+
+
+.cloud::before {
+
+    width: 80px;
+    height: 80px;
+
+    left: 30px;
+    bottom: 10px;
+
+}
+
+
+.cloud::after {
+
+    width: 65px;
+    height: 65px;
+
+    right: 30px;
+    bottom: 5px;
+
+}
+
+
+.cloud1 {
+
+    top: 70px;
+    left: 30px;
+
+}
+
+
+.cloud2 {
+
+    top: 90px;
+    right: 70px;
+
+    transform: scale(1.2);
+
+}
+
+
+.cloud3 {
+
+    bottom: 30px;
+    left: -30px;
+
+    transform: scale(.8);
+
+}
+
+
+.building {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100px;
+
+    background: #20bcd3;
+
+    border: 3px solid #1597ba;
+
+}
+
+
+.building::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    background:
+        repeating-linear-gradient(to bottom,
+            #a9edf1 0 12px,
+            transparent 12px 25px);
+
+}
+
+
+.building1 {
+
+    left: 2%;
+
+    height: 45%;
+
+    background: #f3c86b;
+
+}
+
+
+.building2 {
+
+    left: 14%;
+
+    height: 65%;
+
+}
+
+
+.building3 {
+
+    left: 25%;
+
+    height: 35%;
+
+    background: #f28ab3;
+
+}
+
+
+.building4 {
+
+    right: 15%;
+
+    height: 60%;
+
+    background: #f3ca61;
+
+}
+
+
+.building5 {
+
+    right: 3%;
+
+    height: 42%;
+
+    background: #ed83b0;
+
+}
+
+
+
+header {
+    width: 70%;
+    max-width: 1250px;
+
+    height: 90px;
+
+    margin: 35px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+
+    background: linear-gradient(#ff8bb3,
+            #ff7da9);
+
+    border: 4px solid #1c2259;
+
+    padding: 0 30px;
+}
+
+
+.logo {
+    position: absolute;
+
+    left: 35px;
+    top: -25px;
+
+    width: 190px;
+
+    text-decoration: none;
+
+    transform: rotate(-3deg);
+
+    z-index: 10;
+}
+
+
+.logo-tiny {
+
+    display: block;
+
+    color: #ff70a4;
+
+    font-size: 50px;
+
+    line-height: .75;
+
+    font-weight: 700;
+
+    -webkit-text-stroke: 3px #171d5b;
+
+    text-shadow:
+        3px 3px 0 white;
+
+}
+
+
+.logo-trouble {
+
+    display: block;
+
+    color: #55df50;
+
+    font-size: 38px;
+
+    line-height: .9;
+
+    font-weight: 700;
+
+    -webkit-text-stroke: 3px #171d5b;
+
+    text-shadow:
+        3px 3px 0 white;
+
+}
+
+
+.logo small {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 20px;
+
+    font-size: 13px;
+
+    color: #1c2259;
+
+    font-weight: 700;
+
+}
+
+
+nav {
     display: flex;
 
     align-items: center;
 
-    gap: 30px;
+    justify-content: flex-end;
 
-    height: 100%;
+    gap: 18px;
+
+    margin-right: 35px;
 }
 
-.nav-links a {
 
-    color: #222;
-
+nav a {
     text-decoration: none;
 
-    font-size: 15px;
+    color: #1c2259;
 
-    font-weight: bold;
+    font-size: 13px;
 
-    position: relative;
+    font-weight: 600;
 
     transition: 0.2s;
 }
 
-.nav-links a:hover {
 
+nav a:hover {
     color: white;
 
     transform: translateY(-2px);
 }
 
-
-/* ACTIVE LINK */
-
-.nav-links a.active {
-
-    color: #8d1234;
+.dropdown {
+    position: relative;
 }
 
 
-/* HEROES ARROW */
-
-.arrow {
-
-    font-size: 9px;
-
-    margin-left: 3px;
+.dropbtn {
+    cursor: pointer;
 }
 
 
-/* =========================================
-   YELLOW DIAMOND
-========================================= */
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform:
+        translateX(-50%) translateY(10px);
+
+    width: 180px;
+
+    background: #fff;
+
+    border: 3px solid #1c2259;
+
+    border-radius: 0 0 12px 12px;
+
+    box-shadow:
+        4px 5px 0 rgba(28, 34, 89, .25);
+
+    padding: 7px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        .2s ease;
+
+    z-index: 100;
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%) translateY(0);
+
+}
+
+
+
+.dropdown-menu a {
+
+    display: block;
+
+    padding: 10px 12px;
+
+    color: #1c2259;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    border-radius: 7px;
+
+    transition: .2s;
+
+}
+
+
+
+.dropdown-menu a:nth-child(1):hover {
+
+    background: #ff9bc4;
+
+    color: #1c2259;
+
+}
+
+
+.dropdown-menu a:nth-child(2):hover {
+
+    background: #82e5f0;
+
+    color: #1c2259;
+
+}
+
+
+.dropdown-menu a:nth-child(3):hover {
+
+    background: #8ee89b;
+
+    color: #1c2259;
+
+}
+
+
+.dropdown-menu a:nth-child(4):hover {
+
+    background: #aaa3f2;
+
+    color: #1c2259;
+
+}
+
 
 .star {
 
-    color: #ffd900;
+    position: absolute;
 
-    font-size: 28px;
+    right: 25px;
 
-    transform: rotate(45deg);
+    top: 10px;
 
-    margin-left: 5px;
+    color: #ffe72e;
 
-    text-shadow:
-        2px 2px 0 #222;
-}
-
-
-/* =========================================
-   MAIN PAGE
-========================================= */
-
-.page {
-
-    width: 92%;
-
-    max-width: 1200px;
-
-    margin: 0 auto 40px;
-
-    background: white;
-
-    border-left: 4px solid #222;
-
-    border-right: 4px solid #222;
-
-    border-bottom: 4px solid #222;
-
-    padding: 30px;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-.about-header {
-
-    text-align: center;
-
-    border-bottom: 5px solid #222;
-
-    padding: 10px 10px 25px;
-}
-
-.small-title {
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 5px;
-
-    color: #e91e63;
-}
-
-.about-header h1 {
-
-    font-family: Impact, sans-serif;
-
-    font-size: 65px;
-
-    letter-spacing: 5px;
-
-    margin: 5px 0;
-
-    transform: rotate(-2deg);
-}
-
-.about-header h1 span {
-
-    color: #e91e63;
+    font-size: 38px;
 
     text-shadow:
-        4px 4px 0 #ffd92f;
-}
+        2px 2px #1c2259;
 
-.subtitle {
-
-    font-size: 20px;
-
-    font-weight: bold;
-}
-
-.school {
-
-    font-size: 16px;
-
-    margin-top: 5px;
-
-    color: #555;
 }
 
 
@@ -554,11 +774,11 @@ footer {
 
     gap: 25px;
 
-    padding: 20px;
+    padding: 10px;
 
     border-top: 5px dashed #222;
 
-    font-weight: bold;
+     font-size: 11px;
 }
 
 .mojo-circle {
@@ -596,131 +816,185 @@ footer {
 /* =========================================
    RESPONSIVE
 ========================================= */
-
 @media (max-width: 900px) {
 
-    .navbar {
+    .website {
 
-        height: auto;
+        max-width: 96%;
 
-        min-height: 85px;
-
-        padding: 10px 15px;
     }
 
-    .logo img {
 
-        width: 170px;
+    header {
+
+        padding-left: 190px;
+
     }
 
-    .nav-links {
 
-        gap: 15px;
-    }
-
-    .nav-links a {
-
-        font-size: 13px;
-    }
-
-    .collage {
-
-        grid-template-columns: 1fr;
-    }
-
-    .center-piece {
-
-        display: none;
-    }
-
-    .member {
-
-        transform: none;
-    }
-
-    .about-header h1 {
-
-        font-size: 48px;
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .navbar {
-
-        flex-direction: column;
+    nav {
 
         gap: 8px;
 
-        padding: 10px;
-
-        height: auto;
     }
+
+
+    nav a {
+
+        font-size: 10px;
+
+    }
+
 
     .logo {
 
+        left: 15px;
+
+    }
+
+
+    .character-grid {
+
         height: auto;
+
     }
 
-    .logo img {
 
-        width: 180px;
+    .character-image {
+
+        height: 210px;
+
     }
 
-    .nav-links {
 
-        gap: 12px;
+    .team-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .website {
+
+        margin-top: 15px;
+
+    }
+
+
+    header {
+
+        height: auto;
+
+        min-height: 130px;
+
+        padding: 65px 10px 10px;
+
+        justify-content: center;
+
+    }
+
+
+    .logo {
+
+        top: 5px;
+
+        left: 50%;
+
+        transform:
+            translateX(-50%) scale(.7);
+
+    }
+
+
+    nav {
 
         flex-wrap: wrap;
 
         justify-content: center;
+
     }
 
-    .nav-links a {
 
-        font-size: 12px;
+    nav a {
+
+        font-size: 10px;
+
     }
+
 
     .star {
 
         display: none;
+
     }
 
-    .page {
 
-        width: 92%;
+    .hero {
 
-        padding: 15px;
+        min-height: auto;
+
     }
 
-    .about-header h1 {
 
-        font-size: 38px;
+    .hero-title {
+
+        padding: 25px 15px;
+
     }
 
-    .member {
 
-        flex-direction: column;
+    .hero-title h1 {
 
-        text-align: center;
+        font-size: 23px;
+
     }
 
-    .photo {
 
-        width: 150px;
+    .character-grid {
 
-        height: 150px;
+        grid-template-columns:
+            1fr 1fr;
+
     }
 
-    footer {
 
-        flex-direction: column;
+    .character-card {
 
-        text-align: center;
+        padding-bottom: 20px;
+
     }
+
+
+    .character-image {
+
+        height: 180px;
+
+    }
+
+
+    .character-image img {
+
+        max-height: 170px;
+
+    }
+
+
+    .team {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .team-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
 }
