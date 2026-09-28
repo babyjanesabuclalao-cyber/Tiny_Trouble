@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
 
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -12,28 +12,28 @@
 }
 
 
-body {
-    font-family: 'Fredoka', sans-serif;
-
-    min-height: 100vh;
-
-    background: #13cddd;
-
-    color: #17205b;
+html {
+    scroll-behavior: smooth;
 }
 
 
-/* =========================
+body {
+    font-family: 'Fredoka', sans-serif;
+    min-height: 100vh;
+    background: #13cddd;
+    color: #17205b;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
    TOWNSVILLE BACKGROUND
-========================= */
+===================================================== */
 
 .townsville-bg {
     position: fixed;
-
     inset: 0;
-
     overflow: hidden;
-
     z-index: -2;
 
     background:
@@ -49,14 +49,10 @@ body {
 
 .cloud {
     position: absolute;
-
     width: 180px;
     height: 55px;
-
     background: #fffde9;
-
     border-radius: 100px;
-
     opacity: .9;
 }
 
@@ -64,11 +60,8 @@ body {
 .cloud::before,
 .cloud::after {
     content: "";
-
     position: absolute;
-
     background: #fffde9;
-
     border-radius: 50%;
 }
 
@@ -76,7 +69,6 @@ body {
 .cloud::before {
     width: 80px;
     height: 80px;
-
     left: 30px;
     bottom: 10px;
 }
@@ -85,7 +77,6 @@ body {
 .cloud::after {
     width: 65px;
     height: 65px;
-
     right: 30px;
     bottom: 5px;
 }
@@ -100,7 +91,6 @@ body {
 .cloud2 {
     top: 90px;
     right: 70px;
-
     transform: scale(1.2);
 }
 
@@ -108,33 +98,26 @@ body {
 .cloud3 {
     bottom: 30px;
     left: -30px;
-
     transform: scale(.8);
 }
 
 
-/* =========================
+/* =====================================================
    BUILDINGS
-========================= */
+===================================================== */
 
 .building {
     position: absolute;
-
     bottom: 0;
-
     width: 100px;
-
     background: #20bcd3;
-
     border: 3px solid #1597ba;
 }
 
 
 .building::after {
     content: "";
-
     position: absolute;
-
     inset: 15px;
 
     background:
@@ -149,7 +132,6 @@ body {
 .building1 {
     left: 2%;
     height: 45%;
-
     background: #f3c86b;
 }
 
@@ -163,7 +145,6 @@ body {
 .building3 {
     left: 25%;
     height: 35%;
-
     background: #f28ab3;
 }
 
@@ -171,7 +152,6 @@ body {
 .building4 {
     right: 15%;
     height: 60%;
-
     background: #f3ca61;
 }
 
@@ -179,24 +159,19 @@ body {
 .building5 {
     right: 3%;
     height: 42%;
-
     background: #ed83b0;
 }
 
 
-/* =========================
+/* =====================================================
    WEBSITE
-========================= */
+===================================================== */
 
 .website {
     width: 1050px;
-
     max-width: 92%;
-
     margin: 35px auto 0;
-
     background: #ffffff;
-
     border: 4px solid #1c2259;
 
     box-shadow:
@@ -204,17 +179,15 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header {
     height: 75px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: flex-end;
 
     position: relative;
@@ -233,10 +206,8 @@ header {
 
 .logo {
     position: absolute;
-
     left: 35px;
     top: -35px;
-
     width: 190px;
 
     text-decoration: none;
@@ -257,15 +228,13 @@ header {
 }
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 nav {
     display: flex;
-
     align-items: center;
-
     justify-content: flex-end;
 
     gap: 18px;
@@ -276,11 +245,9 @@ nav {
 
 nav a {
     text-decoration: none;
-
     color: #1c2259;
 
     font-size: 13px;
-
     font-weight: 600;
 
     transition: .2s;
@@ -289,7 +256,6 @@ nav a {
 
 nav a:hover {
     color: white;
-
     transform: translateY(-2px);
 }
 
@@ -302,9 +268,9 @@ nav a.active {
 }
 
 
-/* =========================
+/* =====================================================
    DROPDOWN
-========================= */
+===================================================== */
 
 .dropdown {
     position: relative;
@@ -341,7 +307,6 @@ nav a.active {
     padding: 7px;
 
     opacity: 0;
-
     visibility: hidden;
 
     transition: .2s ease;
@@ -352,7 +317,6 @@ nav a.active {
 
 .dropdown:hover .dropdown-menu {
     opacity: 1;
-
     visibility: visible;
 
     transform:
@@ -371,7 +335,6 @@ nav a.active {
     text-decoration: none;
 
     font-size: 12px;
-
     font-weight: 600;
 
     border-radius: 7px;
@@ -417,9 +380,9 @@ nav a.active {
 }
 
 
-/* =========================
+/* =====================================================
    GALLERY INTRO
-========================= */
+===================================================== */
 
 .gallery-intro {
     position: relative;
@@ -427,9 +390,7 @@ nav a.active {
     min-height: 380px;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
@@ -552,7 +513,8 @@ nav a.active {
 
     color: #ffe72e;
 
-    -webkit-text-stroke: 3px #1c2259;
+    -webkit-text-stroke:
+        3px #1c2259;
 
     opacity: .9;
 }
@@ -560,27 +522,27 @@ nav a.active {
 
 .intro-decoration.left {
     left: 35px;
-
     top: 50px;
 
-    transform: rotate(-20deg);
+    transform:
+        rotate(-20deg);
 }
 
 
 .intro-decoration.right {
     right: 45px;
-
     bottom: 40px;
 
     color: #ff83ac;
 
-    transform: rotate(15deg);
+    transform:
+        rotate(15deg);
 }
 
 
-/* =========================
+/* =====================================================
    PHOTO WALL
-========================= */
+===================================================== */
 
 .photo-wall {
     padding: 50px 55px;
@@ -638,9 +600,9 @@ nav a.active {
 }
 
 
-/* =========================
+/* =====================================================
    PHOTO GRID
-========================= */
+===================================================== */
 
 .photo-grid {
     display: grid;
@@ -659,7 +621,8 @@ nav a.active {
 
     display: block;
 
-    padding: 10px 10px 15px;
+    padding:
+        10px 10px 15px;
 
     background: white;
 
@@ -716,7 +679,6 @@ nav a.active {
     position: absolute;
 
     top: -14px;
-
     left: 50%;
 
     transform:
@@ -724,10 +686,10 @@ nav a.active {
         rotate(-2deg);
 
     width: 70px;
-
     height: 27px;
 
-    background: rgba(255, 238, 170, .9);
+    background:
+        rgba(255,238,170,.9);
 
     border-left:
         1px solid rgba(28,34,89,.1);
@@ -758,7 +720,6 @@ nav a.active {
 
 .photo img {
     max-width: 90%;
-
     max-height: 225px;
 
     object-fit: contain;
@@ -814,7 +775,8 @@ nav a.active {
 /* CAPTION */
 
 .caption {
-    padding: 12px 5px 3px;
+    padding:
+        12px 5px 3px;
 
     display: flex;
 
@@ -838,9 +800,724 @@ nav a.active {
 }
 
 
-/* =========================
+/* =====================================================
+   SCENES FROM TOWNSVILLE
+===================================================== */
+
+.scene-gallery {
+    position: relative;
+
+    padding:
+        65px 55px 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffafa 0%,
+            #f5f1ff 55%,
+            #eefcff 100%
+        );
+
+    border-bottom: 4px solid #1c2259;
+
+    overflow: hidden;
+}
+
+
+.scene-gallery::before {
+    content: "ARCHIVE";
+
+    position: absolute;
+
+    right: -35px;
+    top: 25px;
+
+    font-size: 85px;
+
+    font-weight: 700;
+
+    letter-spacing: 8px;
+
+    color:
+        rgba(28,34,89,.035);
+
+    transform:
+        rotate(90deg);
+
+    pointer-events: none;
+}
+
+
+/* SCENE HEADER */
+
+.scene-header {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 32px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 3px solid #1c2259;
+}
+
+
+.scene-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.scene-number {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 3px solid #1c2259;
+
+    border-radius: 50%;
+
+    background: #ff8bb3;
+
+    color: #1c2259;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow:
+        3px 3px 0 rgba(28,34,89,.18);
+}
+
+
+.scene-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #ff639b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.scene-title h2 {
+    margin: 0;
+
+    color: #1c2259;
+
+    font-size: 27px;
+
+    letter-spacing: .5px;
+}
+
+
+.scene-header > p {
+    max-width: 270px;
+
+    margin: 0;
+
+    color: #6a647c;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    text-align: right;
+}
+
+
+/* =====================================================
+   CAROUSEL
+===================================================== */
+
+.scene-carousel {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.scene-window {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        8px 4px 18px;
+}
+
+
+.scene-track {
+    display: flex;
+
+    gap: 18px;
+
+    will-change: transform;
+
+    transition:
+        transform .55s
+        cubic-bezier(.22,.61,.36,1);
+}
+
+
+/* SCENE CARD */
+
+.scene-card {
+    position: relative;
+
+    flex:
+        0 0
+        calc((100% - 54px) / 4);
+
+    min-width: 0;
+
+    background: white;
+
+    border: 3px solid #1c2259;
+
+    box-shadow:
+        5px 6px 0 rgba(28,34,89,.16);
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.scene-card:nth-child(2n) {
+    transform:
+        translateY(7px);
+}
+
+
+.scene-card:hover {
+    transform:
+        translateY(-7px)
+        rotate(-1deg);
+
+    box-shadow:
+        7px 10px 0 rgba(28,34,89,.22);
+
+    z-index: 4;
+}
+
+
+/* SCENE IMAGE */
+
+.scene-image {
+    position: relative;
+
+    height: 175px;
+
+    overflow: hidden;
+
+    background: #e8e7f2;
+
+    border-bottom:
+        3px solid #1c2259;
+}
+
+
+.scene-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 60%,
+            rgba(28,34,89,.25)
+        );
+
+    pointer-events: none;
+}
+
+
+.scene-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .45s ease,
+        filter .45s ease;
+}
+
+
+.scene-card:hover
+.scene-image img {
+    transform:
+        scale(1.08);
+
+    filter:
+        saturate(1.08)
+        contrast(1.03);
+}
+
+
+/* IMAGE NUMBER */
+
+.scene-tag {
+    position: absolute;
+
+    left: 9px;
+    top: 9px;
+
+    z-index: 2;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(255,255,255,.92);
+
+    border: 2px solid #1c2259;
+
+    border-radius: 50%;
+
+    color: #1c2259;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    box-shadow:
+        2px 2px 0 rgba(28,34,89,.2);
+}
+
+
+/* SCENE INFORMATION */
+
+.scene-info {
+    padding:
+        13px 13px 15px;
+
+    min-height: 103px;
+}
+
+
+.scene-info > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ff639b;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+
+.scene-info h3 {
+    margin:
+        0 0 6px;
+
+    color: #1c2259;
+
+    font-size: 12px;
+
+    line-height: 1.2;
+}
+
+
+.scene-info p {
+    margin: 0;
+
+    color: #777084;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CAROUSEL BUTTONS
+===================================================== */
+
+.scene-btn {
+    flex-shrink: 0;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: white;
+
+    border: 3px solid #1c2259;
+
+    border-radius: 50%;
+
+    color: #1c2259;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 29px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        3px 4px 0 rgba(28,34,89,.2);
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+
+.scene-btn:hover {
+    background: #ff8bb3;
+
+    color: white;
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+        4px 5px 0 rgba(28,34,89,.25);
+}
+
+
+.scene-btn:active {
+    transform:
+        scale(.94)
+        translateY(2px);
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.scene-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 8px;
+}
+
+
+.scene-progress {
+    position: relative;
+
+    flex: 1;
+
+    height: 5px;
+
+    overflow: hidden;
+
+    background: #e4e0ed;
+
+    border-radius: 10px;
+}
+
+
+.progress-fill {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    height: 100%;
+
+    width: 10%;
+
+    background: #ff7da9;
+
+    border-radius: 10px;
+
+    transition:
+        width .45s ease;
+}
+
+
+.scene-counter {
+    display: flex;
+
+    gap: 5px;
+
+    min-width: 55px;
+
+    justify-content: flex-end;
+
+    color: #1c2259;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.scene-counter span:first-child {
+    color: #ff639b;
+
+    font-size: 14px;
+}
+
+
+.scene-hint {
+    margin:
+        18px 0 0;
+
+    color: #8a8495;
+
+    font-size: 9px;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.scene-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 35px;
+
+    background:
+        rgba(17,20,52,.88);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+}
+
+
+.scene-lightbox.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+.lightbox-content {
+    width:
+        min(850px, 90vw);
+
+    max-height: 90vh;
+
+    position: relative;
+
+    padding: 10px;
+
+    background: white;
+
+    border: 4px solid #1c2259;
+
+    box-shadow:
+        10px 10px 0
+        rgba(255,139,179,.7);
+
+    transform:
+        scale(.88)
+        rotate(-1deg);
+
+    transition:
+        transform .35s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+
+.scene-lightbox.open
+.lightbox-content {
+    transform:
+        scale(1)
+        rotate(0);
+}
+
+
+.lightbox-content img {
+    width: 100%;
+
+    max-height: 70vh;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #eee;
+}
+
+
+.lightbox-caption {
+    padding:
+        13px 10px 8px;
+}
+
+
+.lightbox-caption span {
+    color: #ff639b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.lightbox-caption h3 {
+    margin:
+        4px 0 0;
+
+    color: #1c2259;
+
+    font-size: 16px;
+}
+
+
+/* CLOSE BUTTON */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    z-index: 5;
+
+    width: 45px;
+    height: 45px;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    background: #ff8bb3;
+
+    color: #1c2259;
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.lightbox-close:hover {
+    transform:
+        rotate(90deg)
+        scale(1.08);
+
+    background: white;
+}
+
+
+/* LIGHTBOX ARROWS */
+
+.lightbox-arrow {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    margin:
+        0 20px;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.lightbox-arrow:hover {
+    background: #ff8bb3;
+
+    color: #1c2259;
+
+    transform:
+        scale(1.1);
+}
+
+
+/* =====================================================
    MOMENTS
-========================= */
+===================================================== */
 
 .moments {
     padding: 50px 55px;
@@ -894,7 +1571,8 @@ nav a.active {
 
     min-height: 200px;
 
-    padding: 25px 18px;
+    padding:
+        25px 18px;
 
     border: 3px solid #1c2259;
 
@@ -949,7 +1627,8 @@ nav a.active {
 
     color: white;
 
-    -webkit-text-stroke: 2px #1c2259;
+    -webkit-text-stroke:
+        2px #1c2259;
 
     margin-bottom: 12px;
 }
@@ -973,12 +1652,13 @@ nav a.active {
 }
 
 
-/* =========================
+/* =====================================================
    TOWNSVILLE NOTE
-========================= */
+===================================================== */
 
 .townsville-note {
-    padding: 60px 50px;
+    padding:
+        60px 50px;
 
     background: #fffdf5;
 
@@ -1004,7 +1684,8 @@ nav a.active {
     box-shadow:
         8px 8px 0 #ff9fc5;
 
-    transform: rotate(-1deg);
+    transform:
+        rotate(-1deg);
 }
 
 
@@ -1033,13 +1714,12 @@ nav a.active {
     position: absolute;
 
     top: -22px;
-
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     width: 42px;
-
     height: 42px;
 
     display: flex;
@@ -1072,7 +1752,8 @@ nav a.active {
 
 
 .note-paper h2 {
-    margin: 15px 0;
+    margin:
+        15px 0;
 
     font-size: 32px;
 
@@ -1106,9 +1787,9 @@ nav a.active {
 }
 
 
-/* =========================
+/* =====================================================
    COLOR STRIP
-========================= */
+===================================================== */
 
 .color-strip {
     display: grid;
@@ -1116,7 +1797,8 @@ nav a.active {
     grid-template-columns:
         repeat(4, 1fr);
 
-    border-top: 4px solid #1c2259;
+    border-top:
+        4px solid #1c2259;
 }
 
 
@@ -1141,7 +1823,6 @@ nav a.active {
 
 .color-item span {
     width: 20px;
-
     height: 20px;
 
     border-radius: 50%;
@@ -1190,16 +1871,17 @@ nav a.active {
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
     text-align: center;
 
     background: #ffb3d1;
 
-    border-top: 4px solid #1c2259;
+    border-top:
+        4px solid #1c2259;
 
     padding: 10px;
 
@@ -1209,9 +1891,9 @@ footer {
 }
 
 
-/* =========================
+/* =====================================================
    TABLET
-========================= */
+===================================================== */
 
 @media (max-width: 900px) {
 
@@ -1256,12 +1938,40 @@ footer {
             repeat(2, 1fr);
     }
 
+
+    /* SCENES */
+
+    .scene-gallery {
+        padding:
+            50px 35px;
+    }
+
+
+    .scene-card {
+        flex-basis:
+            calc((100% - 18px) / 2);
+    }
+
+
+    .scene-header {
+        display: block;
+    }
+
+
+    .scene-header > p {
+        max-width: 500px;
+
+        margin-top: 10px;
+
+        text-align: left;
+    }
+
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media (max-width: 650px) {
 
@@ -1284,7 +1994,6 @@ footer {
 
     .logo {
         top: 5px;
-
         left: 50%;
 
         transform:
@@ -1316,14 +2025,16 @@ footer {
 
 
     .intro-content {
-        padding: 40px 20px;
+        padding:
+            40px 20px;
     }
 
 
     .intro-content h1 {
         font-size: 43px;
 
-        -webkit-text-stroke: 3px #1c2259;
+        -webkit-text-stroke:
+            3px #1c2259;
 
         text-shadow:
             4px 4px #1c2259;
@@ -1350,8 +2061,11 @@ footer {
     }
 
 
+    /* HEROES */
+
     .photo-wall {
-        padding: 35px 20px;
+        padding:
+            35px 20px;
     }
 
 
@@ -1388,12 +2102,94 @@ footer {
     .photo-card:nth-child(2),
     .photo-card:nth-child(3),
     .photo-card:nth-child(4) {
+
         margin-top: 0;
     }
 
 
+    /* SCENES */
+
+    .scene-gallery {
+        padding:
+            40px 20px;
+    }
+
+
+    .scene-title h2 {
+        font-size: 21px;
+    }
+
+
+    .scene-header {
+        margin-bottom: 25px;
+    }
+
+
+    .scene-header > p {
+        font-size: 10px;
+    }
+
+
+    .scene-carousel {
+        gap: 5px;
+    }
+
+
+    .scene-window {
+        padding:
+            8px 4px 15px;
+    }
+
+
+    .scene-track {
+        gap: 14px;
+    }
+
+
+    .scene-card {
+        flex-basis: 100%;
+    }
+
+
+    .scene-card:nth-child(2n) {
+        transform: none;
+    }
+
+
+    .scene-card:hover {
+        transform:
+            translateY(-5px);
+    }
+
+
+    .scene-image {
+        height: 220px;
+    }
+
+
+    .scene-btn {
+        width: 36px;
+        height: 36px;
+
+        font-size: 24px;
+    }
+
+
+    .scene-controls {
+        gap: 10px;
+    }
+
+
+    .scene-hint {
+        display: none;
+    }
+
+
+    /* MOMENTS */
+
     .moments {
-        padding: 35px 20px;
+        padding:
+            35px 20px;
     }
 
 
@@ -1402,13 +2198,17 @@ footer {
     }
 
 
+    /* NOTE */
+
     .townsville-note {
-        padding: 45px 20px;
+        padding:
+            45px 20px;
     }
 
 
     .note-paper {
-        padding: 35px 20px;
+        padding:
+            35px 20px;
     }
 
 
@@ -1416,6 +2216,8 @@ footer {
         font-size: 26px;
     }
 
+
+    /* COLOR STRIP */
 
     .color-strip {
         grid-template-columns:
@@ -1425,6 +2227,58 @@ footer {
 
     .color-item {
         min-height: 60px;
+    }
+
+
+    /* LIGHTBOX */
+
+    .scene-lightbox {
+        padding: 15px;
+    }
+
+
+    .lightbox-content {
+        width: 95vw;
+
+        padding: 7px;
+    }
+
+
+    .lightbox-arrow {
+        position: absolute;
+
+        z-index: 10;
+
+        top: 50%;
+
+        width: 40px;
+        height: 40px;
+
+        margin: 0;
+
+        font-size: 27px;
+
+        background:
+            rgba(28,34,89,.75);
+    }
+
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+
+        width: 38px;
+        height: 38px;
     }
 
 }
