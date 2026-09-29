@@ -306,17 +306,6 @@ body:after {
     margin-top: 5px
 }
 
-.card .arrow {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border: 1px solid #555
-}
-
 .story {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
@@ -326,13 +315,12 @@ body:after {
 
 .story-art {
     min-height: 500px;
-    background: linear-gradient(135deg, rgba(229, 9, 20, .15), transparent), url('https://image.tmdb.org/t/p/w780/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg') center/cover;
+    background: linear-gradient(135deg, rgba(229, 9, 20, .15), transparent), url('https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2025/11/Netflixs-Stranger-Things-5-Official-Poster-691x1024.jpg') center/cover;
     border: 1px solid #303038;
     position: relative
 }
 
 .story-art:after {
-    content: "HAWKINS / INDIANA";
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -566,46 +554,6 @@ body:after {
     }
 }
 
-.char-placeholder {
-    height: 100%;
-    min-height: 420px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle at 50% 35%, rgba(229, 9, 20, .24), transparent 42%), linear-gradient(145deg, #18131a, #07070a 65%);
-    position: relative;
-    overflow: hidden
-}
-
-.char-placeholder:before {
-    content: "";
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    border: 1px solid rgba(229, 9, 20, .28);
-    border-radius: 50%;
-    box-shadow: 0 0 70px rgba(229, 9, 20, .15) inset
-}
-
-.char-placeholder span {
-    font: 18px 'Roboto Mono';
-    letter-spacing: 4px;
-    color: var(--red);
-    z-index: 1
-}
-
-.char-placeholder b {
-    font: 62px 'Bebas Neue';
-    letter-spacing: 4px;
-    z-index: 1;
-    text-shadow: 0 0 25px rgba(229, 9, 20, .45)
-}
-
-.card:hover .char-placeholder {
-    background: radial-gradient(circle at 50% 35%, rgba(229, 9, 20, .4), transparent 45%), linear-gradient(145deg, #241016, #07070a 65%)
-}
-
 .character-portrait {
     display: flex;
     flex-direction: column;
@@ -627,7 +575,7 @@ body:after {
 }
 
 
-/* TINY TROUBLE CHARACTER CAROUSEL */
+/* Character Carousel */
 .carousel-wrap {
     position: relative;
     display: flex;
