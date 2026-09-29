@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Gallery | Tiny Trouble</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 14px
+        }
+
+        .shot {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #29292f;
+            background: #111;
+            min-height: 250px
+        }
+
+        .shot:nth-child(1),
+        .shot:nth-child(6) {
+            grid-column: span 7
+        }
+
+        .shot:nth-child(2),
+        .shot:nth-child(3),
+        .shot:nth-child(4),
+        .shot:nth-child(5) {
+            grid-column: span 5
+        }
+
+        .shot:nth-child(7),
+        .shot:nth-child(8) {
+            grid-column: span 6
+        }
+
+        .shot img {
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            object-fit: cover;
+            transition: .5s
+        }
+
+        .shot:hover img {
+            transform: scale(1.06);
+            filter: brightness(.7)
+        }
+
+        .shot span {
+            position: absolute;
+            left: 16px;
+            bottom: 14px;
+            font: 11px 'Roboto Mono';
+            letter-spacing: 2px;
+            background: #000b;
+            padding: 8px 10px
+        }
+
+        .carousel-note {
+            margin: 0 0 30px;
+            color: #888;
+            font: 11px 'Roboto Mono';
+            letter-spacing: 1px
+        }
+
+        @media(max-width:700px) {
+            .gallery {
+                grid-template-columns: 1fr
+            }
+
+            .shot,
+            .shot:nth-child(n) {
+                grid-column: span 1
+            }
+
+            .shot img {
+                min-height: 300px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav"><a class="logo" href="index.html">TINY<span>.</span>TROUBLE</a><button class="menu">☰</button>
+        <ul class="navlinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="characters.html">CHARACTERS</a></li>
+            <li><a class="active" href="gallery.html">GALLERY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </nav>
+    <header class="page-hero">
+        <div class="section-kicker">VISUAL ARCHIVE</div>
+        <h1>HAWKINS / SCENES</h1>
+        <p>Moments from the world of Stranger Things — from ordinary streets to places where reality starts to break.
+        </p>
+    </header>
+    <section class="section">
+        <p class="carousel-note">ARCHIVE 001 — HOVER OVER A FRAME TO REVEAL ITS ATMOSPHERE</p>
+        <div class="gallery">
+            <div class="shot"><img src="https://image.tmdb.org/t/p/original/49WJfe7hnR9gV9Nn5qQ3cXwYh5Y.jpg"><span>THE
+                    UPSIDE DOWN</span></div>
+            <div class="shot"><img
+                    src="https://image.tmdb.org/t/p/w780/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"><span>HAWKINS</span></div>
+            <div class="shot"><img src="https://image.tmdb.org/t/p/w780/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"><span>THE
+                    PARTY</span></div>
+            <div class="shot"><img
+                    src="https://image.tmdb.org/t/p/w780/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"><span>ELEVEN</span></div>
+            <div class="shot"><img src="https://image.tmdb.org/t/p/w780/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"><span>THE
+                    MYSTERY</span></div>
+            <div class="shot"><img src="https://image.tmdb.org/t/p/original/49WJfe7hnR9gV9Nn5qQ3cXwYh5Y.jpg"><span>THE
+                    RIFT</span></div>
+            <div class="shot"><img
+                    src="https://image.tmdb.org/t/p/w780/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"><span>1980s</span></div>
+            <div class="shot"><img src="https://image.tmdb.org/t/p/w780/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"><span>CASE
+                    CLOSED?</span></div>
+        </div>
+    </section>
+    <footer class="footer"><strong>TINY<span>.</span>TROUBLE</strong>
+        <p>Fan-made student project • <span id="year"></span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
