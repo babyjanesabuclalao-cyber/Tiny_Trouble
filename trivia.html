@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,7 +178,11 @@
             q5: "b"
         };
 
+<<<<<<< HEAD
         quizForm.addEventListener("submit", function(event) {
+=======
+        quizForm.addEventListener("submit", function (event) {
+>>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
             event.preventDefault();
 
             let score = 0;
@@ -201,13 +209,25 @@
             result.textContent =
                 "Your score: " + score + "/5. " +
                 (score === 5 ? "Amazing! You know Hawkins well!" :
+<<<<<<< HEAD
                 score >= 3 ? "Good job! Keep exploring Hawkins!" :
                 "Keep watching and try again!");
         });
 
         quizForm.addEventListener("reset", function() {
+=======
+                    score >= 3 ? "Good job! Keep exploring Hawkins!" :
+                        "Keep watching and try again!");
+        });
+
+        quizForm.addEventListener("reset", function () {
+>>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
             result.textContent = "";
         });
     </script>
 </body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
 </html>
