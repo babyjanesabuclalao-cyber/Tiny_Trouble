@@ -49,5 +49,5 @@ jobs:
           port: 22
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: "./"
-          remote_path: "REPLACE_WITH_YOUR_ACTUAL_SERVER_PATH"
+          remote_path: "/home/lsu-source-tinytrouble/htdocs/tinytrouble.lsu-source.org/"
           args: "-o ConnectTimeout=30"
