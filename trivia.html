@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-=======
-
->>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +60,7 @@
         }
 
         .quiz-button {
-            margin-top: 20px;
+            margin: 20px 8px 0 0;
             padding: 13px 22px;
             border: none;
             border-radius: 6px;
@@ -90,6 +86,7 @@
     <nav class="nav">
         <a class="logo" href="index.html">TINY<span>.</span>TROUBLE</a>
         <button class="menu" aria-label="Open navigation menu">☰</button>
+
         <ul class="navlinks">
             <li><a href="index.html">HOME</a></li>
             <li><a href="characters.html">CHARACTERS</a></li>
@@ -113,6 +110,7 @@
                 <div class="section-kicker">CLASSIFIED FILE</div>
                 <h2>Test Your Knowledge</h2>
             </div>
+
             <p class="section-intro">
                 Answer all five questions and see how well you know Hawkins.
             </p>
@@ -135,7 +133,7 @@
 
             <div class="quiz-question">
                 <h3>3. What game do Mike, Dustin, Lucas, and Will enjoy playing?</h3>
-                <label><input type="radio" name="q3" value="a"> Dungeons & Dragons</label>
+                <label><input type="radio" name="q3" value="a"> Dungeons &amp; Dragons</label>
                 <label><input type="radio" name="q3" value="b"> Monopoly</label>
                 <label><input type="radio" name="q3" value="c"> Chess</label>
             </div>
@@ -167,9 +165,11 @@
     </footer>
 
     <script src="script.js"></script>
+
     <script>
         const quizForm = document.getElementById("quizForm");
         const result = document.getElementById("result");
+
         const answers = {
             q1: "b",
             q2: "c",
@@ -178,11 +178,7 @@
             q5: "b"
         };
 
-<<<<<<< HEAD
-        quizForm.addEventListener("submit", function(event) {
-=======
         quizForm.addEventListener("submit", function (event) {
->>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
             event.preventDefault();
 
             let score = 0;
@@ -206,28 +202,23 @@
                 return;
             }
 
-            result.textContent =
-                "Your score: " + score + "/5. " +
-                (score === 5 ? "Amazing! You know Hawkins well!" :
-<<<<<<< HEAD
-                score >= 3 ? "Good job! Keep exploring Hawkins!" :
-                "Keep watching and try again!");
-        });
+            let message;
 
-        quizForm.addEventListener("reset", function() {
-=======
-                    score >= 3 ? "Good job! Keep exploring Hawkins!" :
-                        "Keep watching and try again!");
+            if (score === 5) {
+                message = "Amazing! You know Hawkins well!";
+            } else if (score >= 3) {
+                message = "Good job! Keep exploring Hawkins!";
+            } else {
+                message = "Keep watching and try again!";
+            }
+
+            result.textContent =
+                "Your score: " + score + "/5. " + message;
         });
 
         quizForm.addEventListener("reset", function () {
->>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
             result.textContent = "";
         });
     </script>
 </body>
-<<<<<<< HEAD
-=======
-
->>>>>>> 07fdf3550114e3fb646fa10ac3efc15f332f4375
 </html>
