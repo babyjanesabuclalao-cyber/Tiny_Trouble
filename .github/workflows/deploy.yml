@@ -44,8 +44,13 @@ jobs:
       - name: Prepare Website Files
         run: |
           mkdir -p deploy
-          rsync -av --exclude='.git/' --exclude='.github/' --exclude='deploy/' ./ deploy/
+          rsync -av \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='deploy/' \
+            ./ deploy/
           echo "Website files prepared for deployment."
+          ls -la deploy/
 
       - name: Transfer Files via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
@@ -54,6 +59,6 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           port: 22
           password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: "./deploy/*"
+          local_path: "./deploy/"
           remote_path: "/home/lsu-source-tinytrouble/htdocs/tinytrouble.lsu-source.org/"
           args: "-o ConnectTimeout=30"
