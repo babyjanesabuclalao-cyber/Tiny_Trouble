@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Tiny Trouble</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-banner {
+            padding: 75px 20px 45px;
+            text-align: center;
+            background: linear-gradient(#170b12, #08090d);
+        }
+
+        .page-banner .eyebrow {
+            color: #e63946;
+            letter-spacing: 3px;
+        }
+
+        .page-banner h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            margin: 15px 0;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: #111117;
+            border: 1px solid #49303a;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            margin-top: 0;
+        }
+
+        .contact-info p {
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: #ff6978;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 16px 0 7px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #49303a;
+            border-radius: 6px;
+            background: #09090e;
+            color: white;
+            font: inherit;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            margin-top: 18px;
+            padding: 13px 20px;
+            background: #b51f32;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #e63946;
+        }
+
+        #formMessage {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <a class="logo" href="index.html">TINY<span>.</span>TROUBLE</a>
+        <button class="menu" aria-label="Open navigation menu">☰</button>
+        <ul class="navlinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="characters.html">CHARACTERS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="trivia.html">TRIVIA</a></li>
+            <li><a href="behind-the-scenes.html">BEHIND THE SCENES</a></li>
+            <li><a class="active" href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-banner">
+        <div class="eyebrow">TRANSMISSION FROM HAWKINS</div>
+        <h1>CONTACT US</h1>
+        <p>Have a question or feedback about our student project?</p>
+    </header>
+
+    <main class="section">
+        <div class="section-head">
+            <div>
+                <div class="section-kicker">OPEN CHANNEL</div>
+                <h2>Get in Touch</h2>
+            </div>
+            <p class="section-intro">
+                We welcome feedback and suggestions about Tiny Trouble.
+            </p>
+        </div>
+
+        <div class="contact-layout">
+            <section class="contact-info">
+                <h2>About Our Project</h2>
+                <p>
+                    Tiny Trouble is a student-made website inspired by
+                    Stranger Things. It explores the characters, gallery,
+                    trivia, and world of Hawkins.
+                </p>
+
+                <h3>Project Team</h3>
+                <p>
+                    Baby Jane, Ziannilah, Paula, and Gesriell
+                </p>
+
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:YOUR-GROUP-EMAIL@example.com">
+                        Contact our project team
+                    </a>
+                </p>
+
+                <p>
+                    Replace the sample email address with your group's
+                    actual email address before publishing.
+                </p>
+            </section>
+
+            <section class="contact-form">
+                <h2>Send Feedback</h2>
+
+                <form id="contactForm">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                    <button type="submit">SUBMIT MESSAGE</button>
+                    <p id="formMessage" aria-live="polite"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <strong>TINY<span>.</span>TROUBLE</strong>
+        <p>BABY JANE • ZIANNILAH • PAULA • GESRIELL</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+
+                document.getElementById("formMessage").textContent =
+                    "Thank you for your feedback! This demo form does not send or save messages yet.";
+            }
+        );
+    </script>
+</body>
+
+</html>
