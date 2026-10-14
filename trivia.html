@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia | Tiny Trouble</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-banner {
+            padding: 75px 20px 45px;
+            text-align: center;
+            background: linear-gradient(#170b12, #08090d);
+        }
+
+        .page-banner .eyebrow {
+            color: #e63946;
+            letter-spacing: 3px;
+        }
+
+        .page-banner h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            margin: 15px 0;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 25px;
+            border: 1px solid #49303a;
+            background: #111117;
+            border-radius: 12px;
+        }
+
+        .quiz-question {
+            padding: 20px 0;
+            border-bottom: 1px solid #30252d;
+        }
+
+        .quiz-question h3 {
+            margin-bottom: 15px;
+        }
+
+        .quiz-question label {
+            display: block;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #39313a;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .quiz-question label:hover {
+            background: #281923;
+        }
+
+        .quiz-question input {
+            margin-right: 10px;
+            accent-color: #e63946;
+        }
+
+        .quiz-button {
+            margin-top: 20px;
+            padding: 13px 22px;
+            border: none;
+            border-radius: 6px;
+            background: #b51f32;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .quiz-button:hover {
+            background: #e63946;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <a class="logo" href="index.html">TINY<span>.</span>TROUBLE</a>
+        <button class="menu" aria-label="Open navigation menu">☰</button>
+        <ul class="navlinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="characters.html">CHARACTERS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a class="active" href="trivia.html">TRIVIA</a></li>
+            <li><a href="behind-the-scenes.html">BEHIND THE SCENES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-banner">
+        <div class="eyebrow">HAWKINS KNOWLEDGE TEST</div>
+        <h1>STRANGER THINGS<br>TRIVIA</h1>
+        <p>Think you know the Party? Test your knowledge!</p>
+    </header>
+
+    <main class="section">
+        <div class="section-head">
+            <div>
+                <div class="section-kicker">CLASSIFIED FILE</div>
+                <h2>Test Your Knowledge</h2>
+            </div>
+            <p class="section-intro">
+                Answer all five questions and see how well you know Hawkins.
+            </p>
+        </div>
+
+        <form id="quizForm" class="quiz-container">
+            <div class="quiz-question">
+                <h3>1. What is the name of Eleven's hometown?</h3>
+                <label><input type="radio" name="q1" value="a"> Chicago</label>
+                <label><input type="radio" name="q1" value="b"> Hawkins</label>
+                <label><input type="radio" name="q1" value="c"> New York</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>2. What is the name of the alternate dimension?</h3>
+                <label><input type="radio" name="q2" value="a"> The Dark World</label>
+                <label><input type="radio" name="q2" value="b"> The Other Side</label>
+                <label><input type="radio" name="q2" value="c"> The Upside Down</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>3. What game do Mike, Dustin, Lucas, and Will enjoy playing?</h3>
+                <label><input type="radio" name="q3" value="a"> Dungeons & Dragons</label>
+                <label><input type="radio" name="q3" value="b"> Monopoly</label>
+                <label><input type="radio" name="q3" value="c"> Chess</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>4. What food is Eleven especially known for loving?</h3>
+                <label><input type="radio" name="q4" value="a"> Pizza</label>
+                <label><input type="radio" name="q4" value="b"> Eggo waffles</label>
+                <label><input type="radio" name="q4" value="c"> Burgers</label>
+            </div>
+
+            <div class="quiz-question">
+                <h3>5. What is the name of the shopping mall featured in Season 3?</h3>
+                <label><input type="radio" name="q5" value="a"> Hawkins Plaza</label>
+                <label><input type="radio" name="q5" value="b"> Starcourt Mall</label>
+                <label><input type="radio" name="q5" value="c"> Star Mall</label>
+            </div>
+
+            <button class="quiz-button" type="submit">CHECK MY SCORE</button>
+            <button class="quiz-button" type="reset">TRY AGAIN</button>
+
+            <p id="result" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <strong>TINY<span>.</span>TROUBLE</strong>
+        <p>BABY JANE • ZIANNILAH • PAULA • GESRIELL</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const quizForm = document.getElementById("quizForm");
+        const result = document.getElementById("result");
+        const answers = {
+            q1: "b",
+            q2: "c",
+            q3: "a",
+            q4: "b",
+            q5: "b"
+        };
+
+        quizForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let score = 0;
+            let unanswered = 0;
+
+            for (const question in answers) {
+                const selected = quizForm.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+                if (!selected) {
+                    unanswered++;
+                } else if (selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            if (unanswered > 0) {
+                result.textContent =
+                    "Please answer all five questions first.";
+                return;
+            }
+
+            result.textContent =
+                "Your score: " + score + "/5. " +
+                (score === 5 ? "Amazing! You know Hawkins well!" :
+                score >= 3 ? "Good job! Keep exploring Hawkins!" :
+                "Keep watching and try again!");
+        });
+
+        quizForm.addEventListener("reset", function() {
+            result.textContent = "";
+        });
+    </script>
+</body>
+</html>
